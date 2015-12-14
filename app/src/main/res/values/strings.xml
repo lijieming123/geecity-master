@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">聚城管家</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="title_activity_notice_list">公司通知</string>
+    <string name="title_activity_notice_detail">公司通知</string>
+    <string name="title_activity_message_list">内部消息</string>
+    <string name="title_activity_message_detail">内部消息</string>
+    <string name="title_activity_message_reply">内部消息</string>
+    <string name="title_activity_send_list">派单处理</string>
+    <string name="title_activity_order_detail">派单处理</string>
+    <string name="title_activity_catch_order">派单处理</string>
+    <string name="title_activity_send_order">派单处理</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_room_info">房间信息</string>
+    <string name="title_activity_quality_check">品质检查</string>
+    <string name="title_activity_scan_meter">设备扫描</string>
+    <string name="title_activity_meter_detail">抄表详细</string>
+    <string name="title_activity_meter_submit">MeterSubmitActivity</string>
+    <string name="title_activity_meter_search">仪表抄表</string>
+    <string name="title_activity_room_filter">选择房间</string>
+    <string name="title_activity_accept_order">AcceptOrderActivity</string>
+    <string name="title_activity_device">DeviceActivity</string>
+    <string name="title_activity_quality_detail">QualityDetailActivity</string>
+    <string name="title_activity_receive">ReceiveActivity</string>
+    <string name="title_activity_receive_detail">ReceiveDetailActivity</string>
+    <string name="title_activity_add_receive">AddReceiveActivity</string>
+    <string name="title_activity_task_detail">TaskDetailActivity</string>
+    <string name="title_activity_task_list">TaskListActivity</string>
+    <string name="title_activity_add_task">AddTaskActivity</string>
+    <string name="title_activity_rob_bill">RobBillActivity</string>
+</resources>
