@@ -1,0 +1,318 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.bluemap.geecitypoperty.order.OrderDetailActivity">
+
+    <include
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <ProgressBar
+        android:id="@+id/aod_pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/aod_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/ALIZARIN"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="派单"
+                android:textColor="#ffffff"
+                android:textSize="17dp" />
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/aod_cv_wait"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:id="@+id/aod_ll_wait"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/aod_tv_room"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="派单房间"
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/aod_tv_contact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="联系人"
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/aod_tv_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="联系电话"
+                            android:textSize="@dimen/content_font_size" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/aod_tv_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="提交时间："
+                        android:textSize="@dimen/content_font_size" />
+
+                    <TextView
+                        android:id="@+id/aod_tv_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="预约时间："
+                        android:textSize="@dimen/content_font_size" />
+
+                    <TextView
+                        android:id="@+id/aod_tv_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="派单内容："
+                        android:textSize="@dimen/content_font_size" />
+
+                    <TextView
+                        android:id="@+id/aod_tv_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="相关照片："
+                        android:textSize="@dimen/content_font_size" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/aod_rv_photos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="104dp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/aod_cv_accept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="受理信息"
+                        android:id="@+id/textView13"
+                        android:background="@color/ORANGE"
+                        android:textColor="#ffffff"
+                        android:padding="2dp" />
+
+                    <LinearLayout
+                        android:id="@+id/aod_ll_scramble"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/aod_tv_repair_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="报修时间："
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/aod_tv_expect_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="要求完工时间："
+                            android:textSize="@dimen/content_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/aod_ll_tasking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/aod_tv_task_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="派工时间："
+                            android:textSize="@dimen/content_font_size" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/aod_cv_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="结单信息"
+                        android:id="@+id/textView24"
+                        android:background="@color/ORANGE"
+                        android:textColor="#ffffff"
+                        android:padding="2dp" />
+
+                    <LinearLayout
+                        android:id="@+id/aod_ll_finish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/aod_tv_close_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="结单时间："
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/aod_tv_start_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="开工时间："
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/aod_tv_end_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="完工时间："
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/aod_tv_material_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="材料费："
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/aod_tv_hour_charge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="工时费："
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/aod_tv_material_usage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="材料使用情况："
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/aod_tv_other"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="其他说明："
+                            android:textSize="@dimen/content_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/aod_ll_pause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/aod_tv_pause_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="截停时间："
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/aod_tv_pause_reason"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="截停原因："
+                            android:textSize="@dimen/content_font_size" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <Button
+                android:id="@+id/aod_btn_commit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_blue_selector"
+                android:text="确认受理"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/content_font_size" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

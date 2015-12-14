@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.bluemap.geecitypoperty.receive.AddReceiveActivity">
+
+
+    <include
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView6" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="进展情况："
+                android:id="@+id/textView43" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/aap_rg_state">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="处理中"
+                    android:id="@+id/aap_rb_1"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已完成"
+                    android:id="@+id/aap_rb_2"
+                    android:layout_marginLeft="4dp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暂不处理"
+                    android:id="@+id/aap_rb_3"
+                    android:layout_marginLeft="4dp" />
+            </RadioGroup>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/aap_et_content"
+                android:layout_marginTop="4dp"
+                android:hint="请填写进展说明" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/aap_et_remark1"
+                android:layout_marginTop="4dp"
+                android:hint="请填写答复客户超时备注" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/aap_et_remark2"
+                android:layout_marginTop="4dp"
+                android:hint="请填写承诺完成超时备注" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/aap_et_remark3"
+                android:layout_marginTop="4dp"
+                android:hint="请填写任务处理超时备注" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/aap_iv_photo"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/CONCRETE"
+                android:src="@mipmap/common_ic_camera"
+                android:onClick="onPhoto"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="104dp"
+                android:id="@+id/aap_rv_photo"
+                android:layout_marginTop="4dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交"
+                android:id="@+id/button4"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_green_selector"
+                android:textColor="#ffffff"
+                android:onClick="onSubmit" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

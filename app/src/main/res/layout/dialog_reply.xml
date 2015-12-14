@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@color/CLOUDS">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回复："
+        android:id="@+id/dr_tv_title"
+        android:textSize="18dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/dr_et_content"
+        android:layout_gravity="center_horizontal"
+        android:minLines="4"
+        android:background="#ffffff"
+        android:layout_marginTop="8dp"
+        android:gravity="top|left"
+        android:padding="8dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dr_ibtn_cancel"
+            android:layout_weight="1"
+            android:src="@mipmap/common_btn_close"
+            android:background="@color/POMEGRANATE" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dr_ibtn_submit"
+            android:layout_weight="1"
+            android:src="@mipmap/common_btn_check"
+            android:background="@color/NEPHRITIS"
+            android:layout_marginLeft="8dp" />
+    </LinearLayout>
+</LinearLayout>

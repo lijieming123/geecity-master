@@ -1,0 +1,361 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" tools:context=".MainActivity"
+    android:padding="8dp">
+
+    <view
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        class="android.support.v4.widget.SwipeRefreshLayout"
+        android:id="@+id/am_srl_refresh"
+        android:layout_gravity="center_horizontal" >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/am_sv_main" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:background="@color/PETER_RIVER">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="注销"
+                        android:id="@+id/am_btn_logout"
+                        android:layout_gravity="right|top"
+                        android:background="@null"
+                        android:textColor="#ffffff"
+                        android:drawableLeft="@mipmap/main_ic_logout"
+                        android:drawablePadding="4dp"
+                        android:onClick="onLogout" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/imageView"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/main_def_usericon" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/app_name"
+                                android:id="@+id/textView25"
+                                android:textSize="18dp"
+                                android:textColor="#ffffff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="用户名称"
+                                android:id="@+id/am_tv_username"
+                                android:textSize="16dp"
+                                android:layout_marginTop="16dp"
+                                android:textColor="#ffffff"
+                                android:drawableLeft="@mipmap/main_ic_user"
+                                android:gravity="center_vertical"
+                                android:drawablePadding="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:background="@drawable/btn_purple_selector"
+                        android:id="@+id/am_ll_notice">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="我的通知"
+                            android:id="@+id/textView30"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:id="@+id/imageView2"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:scaleType="center"
+                            android:src="@mipmap/main_ic_notice" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0条未读"
+                            android:id="@+id/am_tv_notice"
+                            android:layout_gravity="right"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="8dp"
+                        android:padding="8dp"
+                        android:background="@drawable/btn_orange_selector"
+                        android:id="@+id/am_ll_receive">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="我的接待"
+                            android:id="@+id/textView32"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:id="@+id/imageView3"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:scaleType="center"
+                            android:src="@mipmap/main_ic_receive" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0条未处理"
+                            android:id="@+id/am_tv_receive"
+                            android:layout_gravity="right"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:background="@drawable/btn_cyan_selector"
+                        android:id="@+id/am_ll_room">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="住户查询"
+                            android:id="@+id/textView34"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:id="@+id/imageView4"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:scaleType="center"
+                            android:src="@mipmap/main_ic_room" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="点击查询住户"
+                            android:id="@+id/textView35"
+                            android:layout_gravity="right"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="8dp"
+                        android:padding="8dp"
+                        android:background="@drawable/btn_black_selector"
+                        android:id="@+id/am_ll_task">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="我的任务"
+                            android:id="@+id/textView36"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:id="@+id/imageView5"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:scaleType="center"
+                            android:src="@mipmap/main_ic_task" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0条未处理"
+                            android:id="@+id/am_tv_task"
+                            android:layout_gravity="right"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:padding="8dp"
+                        android:background="@drawable/btn_red_selector"
+                        android:id="@+id/am_ll_device">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="设备计划"
+                            android:id="@+id/textView38"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:id="@+id/imageView6"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:scaleType="center"
+                            android:src="@mipmap/main_ic_device" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="点击扫描设备"
+                            android:id="@+id/am_tv_device"
+                            android:layout_gravity="right"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:padding="8dp"
+                        android:background="@drawable/btn_yellow_selector"
+                        android:id="@+id/am_ll_setting">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="系统设置"
+                            android:id="@+id/textView40"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:id="@+id/imageView7"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:scaleType="center"
+                            android:src="@mipmap/main_ic_setting" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="点击进行设置"
+                            android:id="@+id/textView41"
+                            android:layout_gravity="right"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn_rob_bill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="订单列表"
+                        />
+                <Button
+                    android:id="@+id/btn_receive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单接收"
+                    />
+                <Button
+                    android:id="@+id/btn_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单细节"
+                    />
+                    <Button
+                        android:id="@+id/btn_rob_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="订单关闭"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        </view>
+</LinearLayout>

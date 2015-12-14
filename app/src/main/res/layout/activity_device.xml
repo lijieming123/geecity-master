@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.bluemap.geecitypoperty.device.DeviceActivity">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_toolbar"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="扫一扫"
+            android:id="@+id/ad_btn_scan"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_gray_selector"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@mipmap/device_ic_scan"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            android:textSize="20dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="同步数据"
+            android:id="@+id/ad_btn_update"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_gray_selector"
+            android:layout_marginTop="16dp"
+            android:textSize="20dp"
+            android:padding="8dp"
+            android:drawableLeft="@mipmap/device_ic_update"
+            android:drawablePadding="8dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="一键提交"
+            android:id="@+id/ad_btn_submit"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_gray_selector"
+            android:layout_marginTop="16dp"
+            android:textSize="20dp"
+            android:padding="8dp"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@mipmap/device_ic_submit"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</LinearLayout>

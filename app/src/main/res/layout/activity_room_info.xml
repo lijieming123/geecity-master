@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.bluemap.geecitypoperty.meter.RoomInfoActivity">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_toolbar"
+        android:layout_gravity="center_horizontal" />
+
+    <hz.toollib.widget.OnLoadingView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/onloading"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="房间："
+                android:id="@+id/textView2"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/item_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="房间名称"
+                android:id="@+id/ari_tv_name"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/item_large"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="住户："
+                android:id="@+id/textView4"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/item_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张三"
+                android:id="@+id/ari_tv_resident"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/item_large" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系电话："
+                android:id="@+id/textView6"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/item_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系电话"
+                android:id="@+id/ari_tv_phone"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/item_large" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/view"
+                android:background="@drawable/btn_blue_selector"
+                android:layout_marginLeft="32dp"
+                android:src="@mipmap/common_btn_phone"
+                android:onClick="call"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

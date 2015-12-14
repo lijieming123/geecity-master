@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingTop="4dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="4dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view3">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/in_iv_icon"
+                    android:src="@mipmap/notice_ic_unread"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="通知内容"
+                    android:id="@+id/in_tv_title"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/item_middle"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:singleLine="true"
+                    android:textColor="#1b1b1b" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7月10日"
+                    android:id="@+id/in_tv_date"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/item_small"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/ALIZARIN" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="摘要"
+                android:id="@+id/in_tv_content"
+                android:layout_marginTop="4dp"
+                android:maxLines="2"
+                android:minLines="2"
+                android:textColor="@color/CONCRETE" />
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

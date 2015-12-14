@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="window_background">#EDEDED</color>
+    <color name="halftransparent">#90000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+
+    <!-- Flat UI 风格色-->
+    <!--绿松石-->
+    <color name="TURQUOISE">#1abc9c</color>
+    <!--绿海-->
+    <color name="GREEN_SEA">#16a085</color>
+    <!--翡翠-->
+    <color name="EMERALD">#2ecc71</color>
+    <!--玉-->
+    <color name="NEPHRITIS">#27ae60</color>
+    <!--彼得河-->
+    <color name="PETER_RIVER">#3498db</color>
+    <!--伯利兹蓝洞-->
+    <color name="BELIZE_HOLE">#2980b9</color>
+    <!--紫水晶-->
+    <color name="AMETHYST">#9b59b6</color>
+    <!--紫藤-->
+    <color name="WISTERIA">#8e44ad</color>
+    <!--湿沥青-->
+    <color name="WET_ASPHALT">#34495e</color>
+    <!--午夜蓝-->
+    <color name="MIDNIGHT_BLUE">#2c3e50</color>
+    <!--向日葵-->
+    <color name="SUN_FLOWER">#f1c40f</color>
+    <!--橙-->
+    <color name="ORANGE">#f39c12</color>
+    <!--胡萝卜-->
+    <color name="CARROT">#e67e22</color>
+    <!--南瓜-->
+    <color name="PUMPKIN">#d35400</color>
+    <!--茜草红-->
+    <color name="ALIZARIN">#e74c3c</color>
+    <!--石榴-->
+    <color name="POMEGRANATE">#c0392b</color>
+    <!--云-->
+    <color name="CLOUDS">#ecf0f1</color>
+    <!--银-->
+    <color name="SILVER">#bdc3c7</color>
+    <!--混凝土-->
+    <color name="CONCRETE">#95a5a6</color>
+    <!--石棉-->
+    <color name="ASBESTOS">#7f8c8d</color>
+    <color name="black">#000000</color>
+</resources>

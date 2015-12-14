@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.bluemap.geecitypoperty.receive.AddReceiveActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_toolbar"
+        android:layout_gravity="center_horizontal" />
+
+    <hz.toollib.widget.OnLoadingView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/onLoadingView"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical"
+      >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接待标题"
+            android:padding="5dp"
+            android:id="@+id/ard_tv_title"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+        <LinearLayout
+            android:background="@drawable/receive_handle_stroke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView4"
+            android:orientation="vertical"
+            android:layout_above="@+id/button2"
+              >
+
+            <LinearLayout
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="接待人状态"
+                    android:textColor="@color/black"
+                    android:id="@+id/ard_tv_receiverstate"
+                    android:layout_marginTop="8dp" />
+                <View
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/ASBESTOS"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="内容"
+                    android:textColor="@color/black"
+                    android:id="@+id/ard_tv_content"
+                    android:layout_marginTop="8dp" />
+                <View
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/ASBESTOS"></View>
+                <TextView
+                    android:id="@+id/ard_tv_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="相关图片："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/content_font_size" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/ard_rv_photos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="104dp"
+                    android:layout_marginTop="4dp"
+                   />
+                <View
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/ASBESTOS"></View>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="报事对象"
+                    android:id="@+id/ard_tv_contact"
+                    android:layout_marginTop="8dp" />
+                <View
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/ASBESTOS"></View>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="报事人联系方式"
+                    android:id="@+id/ard_tv_tel"
+                    android:layout_marginTop="8dp" />
+                <View
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/ASBESTOS"></View>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客户反应"
+                    android:id="@+id/ard_tv_reaction"
+                    android:layout_marginTop="8dp" />
+                <View
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/ASBESTOS"></View>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="二次及以上投诉"
+                    android:id="@+id/ard_tv_twos"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#e33125" />
+                <View
+                    android:id="@+id/v_divider"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/ASBESTOS"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预约时间"
+                    android:textColor="@color/black"
+                    android:id="@+id/ard_tv_orderTime"
+                    android:layout_marginTop="8dp" />
+                <View
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/ASBESTOS"></View>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  受理人"
+                    android:id="@+id/ard_tv_accepter"
+                    android:layout_marginTop="8dp" />
+                <View
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/ASBESTOS"></View>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="受理公司"
+                    android:id="@+id/ard_tv_acceptecomp"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="相关任务"
+            android:id="@+id/button2"
+            android:layout_gravity="center_horizontal"
+            android:onClick="relevantTask"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_cyan_selector"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

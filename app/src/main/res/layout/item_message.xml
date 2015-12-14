@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[07-10]"
+        android:id="@+id/im_tv_date"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/item_small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息标题"
+            android:id="@+id/im_tv_title"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/item_middle"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/im_tv_sender"
+            android:layout_toStartOf="@+id/im_tv_sender" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[张三]"
+            android:id="@+id/im_tv_sender"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/item_small"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="8dp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.bluemap.geecitypoperty.receive.AddReceiveActivity">
+
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_toolbar"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ams_et_username"
+                android:textSize="14dp"
+                android:hint="请输入查找的用户名"
+                android:layout_weight="1"
+                android:singleLine="true" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:text="搜索"
+                android:id="@+id/button8"
+                android:background="@drawable/btn_green_selector"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:layout_marginLeft="8dp"
+                android:onClick="onSearch" />
+        </LinearLayout>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ams_spn_position" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/ams_fl"></FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

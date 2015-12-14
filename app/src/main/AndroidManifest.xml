@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.bluemap.geecitypoperty">
+
+    <!-- Required 自定义用来收发消息的相关权限 -->
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required 一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+
+
+    <!-- 二维码扫描需要的权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="stateHidden">
+        <activity
+            android:name=".root.MainActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".root.LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".notice.NoticeListActivity"
+            android:label="@string/title_activity_notice_list"></activity>
+        <activity
+            android:name=".notice.NoticeDetailActivity"
+            android:label="@string/title_activity_notice_detail"></activity>
+        <activity
+            android:name=".message.MessageListActivity"
+            android:label="@string/title_activity_message_list"></activity>
+        <activity
+            android:name=".message.MessageDetailActivity"
+            android:label="@string/title_activity_message_detail"></activity>
+        <activity
+            android:name=".message.MessageReplyActivity"
+            android:label="@string/title_activity_message_reply"></activity>
+        <activity
+            android:name=".order.OrderListActivity"
+            android:label="@string/title_activity_send_list"></activity>
+        <activity
+            android:name=".order.OrderDetailActivity"
+            android:label="@string/title_activity_order_detail"></activity>
+        <activity
+            android:name=".order.OrderCloseActivity"
+            android:label="@string/title_activity_catch_order"></activity>
+        <activity
+            android:name=".meter.RoomInfoActivity"
+            android:label="@string/title_activity_room_info"></activity>
+        <activity
+            android:name=".quality.QualityCheckActivity"
+            android:label="@string/title_activity_quality_check"></activity>
+        <activity
+            android:name=".device.DeviceDetailActivity"
+            android:label="@string/title_activity_meter_detail"></activity>
+        <activity
+            android:name=".device.DeviceSubmitActivity"
+            android:label="@string/title_activity_meter_submit"></activity>
+        <activity
+            android:name=".meter.RoomFilterActivity"
+            android:label="@string/title_activity_room_filter"></activity>
+        <activity
+            android:name=".order.OrderAcceptActivity"
+            android:label="@string/title_activity_accept_order"></activity>
+        <activity
+            android:name=".zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"></activity>
+        <activity
+            android:name=".zxing.activity.ResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".device.DeviceActivity"
+            android:label="@string/title_activity_device"></activity>
+        <activity
+            android:name=".quality.QualityDetailActivity"
+            android:label="@string/title_activity_quality_detail"></activity>
+        <activity
+            android:name=".receive.ReceiveListActivity"
+            android:label="@string/title_activity_receive"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".receive.ReceiveDetailActivity"
+            android:label="@string/title_activity_receive_detail"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".receive.AddReceiveActivity"
+            android:label="@string/title_activity_add_receive"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".task.TaskDetailActivity"
+            android:label="@string/title_activity_task_detail"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".task.TaskListActivity"
+            android:label="@string/title_activity_task_list"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".task.RelevantTaskListActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".task.AddTaskActivity"
+            android:label="@string/title_activity_add_task"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".task.AddContactActivity"></activity>
+        <activity android:name=".task.AddProgressActivity"></activity>
+        <activity android:name=".task.ProgressListActivity"></activity>
+        <activity android:name=".task.ContactListActivity"></activity>
+        <activity android:name=".task.CloseTaskActivity"></activity>
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".GestureImageActivity" />
+        <activity android:name=".root.SettingActivity"></activity>
+        <activity android:name=".task.MemberSelectorActivity"></activity>
+        <activity android:name=".common.PhotoActivity"></activity>
+        <activity android:name=".room.RoomSelectActivity"></activity>
+
+        <activity
+            android:name=".RobBillActivity"
+            android:label="@string/title_activity_rob_bill"
+            android:theme="@style/AppTheme"></activity>
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <!-- Required SDK 核心功能-->
+        <!-- option since 2.0.5 可配置PushService，DaemonService,PushReceiver,AlarmReceiver的android:process参数 将JPush相关组件设置为一个独立进程 -->
+        <!-- 如：android:process=":remote" -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK 核心功能 since 1.8.0 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter >
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!--Required 显示通知栏 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- User defined. 用户自定义的广播接收器-->
+        <receiver
+            android:name="您自己定义的Receiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required 用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required 用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required 用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required 用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="您应用applicationId对应的appKey" /> <!-- </>值来自开发者平台取得的AppKey-->
+    </application>
+
+</manifest>
