@@ -31,6 +31,9 @@ public class AddTaskHPI extends HttpPostAPI {
     //派工时间
     private String taskTime;
 
+
+
+
     public AddTaskHPI(Context context) {
         super(context);
     }
@@ -52,6 +55,7 @@ public class AddTaskHPI extends HttpPostAPI {
         params.put("content", content);
         params.put("createName", createName);
         params.put("taskTime", taskTime);
+
     }
 
     @Override

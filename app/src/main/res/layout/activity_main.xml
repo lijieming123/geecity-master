@@ -255,7 +255,7 @@
                         android:orientation="vertical"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="2"
+                        android:layout_weight="1"
                         android:padding="8dp"
                         android:background="@drawable/btn_red_selector"
                         android:id="@+id/am_ll_device">
@@ -319,6 +319,42 @@
                             android:layout_height="wrap_content"
                             android:text="点击进行设置"
                             android:id="@+id/textView41"
+                            android:layout_gravity="right"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:padding="8dp"
+                        android:background="@drawable/btn_blue_selector"
+                        android:id="@+id/am_ll_rob">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="快来抢单"
+                            android:id="@+id/textView_rob"
+                            android:textColor="#ffffff"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:id="@+id/imageView_rob"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:scaleType="center"
+                            android:src="@mipmap/main_ic_message" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0条可抢"
+                            android:id="@+id/tv_robbill"
                             android:layout_gravity="right"
                             android:textColor="#ffffff"
                             android:textSize="14dp" />

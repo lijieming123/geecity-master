@@ -16,6 +16,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.umeng.update.UmengUpdateAgent;
+import com.umeng.update.UpdateConfig;
+
 import net.bluemap.geecitypoperty.ExampleUtil;
 import net.bluemap.geecitypoperty.R;
 import net.bluemap.geecitypoperty.common.ShareUtil;
@@ -23,6 +26,8 @@ import net.bluemap.geecitypoperty.common.model.LoginInfo;
 import net.bluemap.geecitypoperty.device.DeviceActivity;
 import net.bluemap.geecitypoperty.notice.NoticeListActivity;
 import net.bluemap.geecitypoperty.receive.ReceiveListActivity;
+import net.bluemap.geecitypoperty.receive.network.GetReceiveDetailHPI;
+import net.bluemap.geecitypoperty.robbill.RobbillListActivity;
 import net.bluemap.geecitypoperty.room.RoomSelectActivity;
 import net.bluemap.geecitypoperty.root.network.GetWorkbenchWSI;
 import net.bluemap.geecitypoperty.task.TaskListActivity;
@@ -52,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     LinearLayout llDevice;
     @ViewInject(id = R.id.am_ll_setting, click = "onClick")
     LinearLayout llSetting;
+    @ViewInject(id = R.id.am_ll_rob, click = "onClick")
+    LinearLayout llRob;
+
 
     @ViewInject(id = R.id.am_tv_device)
     TextView tvDevice;
@@ -65,17 +73,22 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     TextView tvUsername;
 
     LoginInfo li;
-
+    LoginInfo loginInfo = ShareUtil.getInstance(this).getLoginInfo();
     //接口
     GetWorkbenchWSI getWorkbenchWSI;
+    //接口
+    GetReceiveDetailHPI getReceiveDetailHPI;
     public static boolean isForeground = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        UmengUpdateAgent.update(this);
         setContentView(R.layout.activity_main);
         FinalActivity.initInjectedView(this);
+        UpdateConfig.setDebug(true);
 
         initView();
+        Log.d("更新版本吧","111");
         //推送初始化
         init();
         //绑定广播接收
@@ -182,6 +195,12 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
                 break;
             case R.id.am_ll_setting:
                 activity = SettingActivity.class;
+                break;
+            case R.id.am_ll_rob:
+                activity= RobbillListActivity.class;
+                intent.putExtra("receiveId",li.getId());
+               ;
+
                 break;
         }
         if(activity != null){

@@ -70,7 +70,31 @@
                     android:id="@+id/aat_spn_level"
                     android:layout_marginLeft="8dp" />
             </LinearLayout>
-
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:checkedButton="@+id/radio_distribute_bill">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:id="@+id/radio_distribute_bill"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="派单"/>
+                <RadioButton
+                    android:layout_weight="1"
+                    android:id="@+id/radio_rob_bill"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="抢单"/>
+            </RadioGroup>
+            <!--派单、抢单-->
+            <LinearLayout
+                android:id="@+id/linear_arrange_bill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -81,7 +105,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="请选择受理人"
+                    android:hint="请选择受理人"
                     android:id="@+id/aat_tv_accepter"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
@@ -104,7 +128,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="请选择后续受理人"
+                   android:hint="请选择后续受理人"
                     android:id="@+id/aat_tv_follow"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
@@ -116,7 +140,7 @@
                     android:layout_gravity="center_vertical"
                     android:src="@mipmap/common_ic_arrow_right" />
             </LinearLayout>
-
+            </LinearLayout>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -214,6 +238,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/aat_dtp_ttime"
                     android:layout_marginLeft="8dp" />
+
             </LinearLayout>
             <Button
                 android:layout_width="wrap_content"

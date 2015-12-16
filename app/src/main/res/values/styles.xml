@@ -4,6 +4,7 @@
     <style name="MenuTextStyle">
         <item name="android:textSize">12sp</item>
     </style>
+
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- ToolBar颜色 -->
         <item name="colorPrimary">#1E5692</item>

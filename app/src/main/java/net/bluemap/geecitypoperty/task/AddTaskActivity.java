@@ -7,8 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+
 import net.bluemap.geecitypoperty.R;
 import net.bluemap.geecitypoperty.common.DateTimePicker;
 import net.bluemap.geecitypoperty.common.ShareUtil;
@@ -30,6 +34,14 @@ import hz.toollib.util.DialogUtil;
 public class AddTaskActivity extends AppCompatActivity {
 
     //UIs
+    @ViewInject(id= R.id.linear_arrange_bill)
+    LinearLayout mLinearLayoutDisBill;
+
+    RadioGroup mRadioGroup;
+    @ViewInject(id= R.id.radio_distribute_bill)
+    RadioButton mRadioBtnDistribute;
+    @ViewInject(id= R.id.radio_rob_bill)
+    RadioButton mRadioBtnRobBill;
     @ViewInject(id = R.id.aat_et_title)
     EditText etTitle;
     @ViewInject(id = R.id.aat_spn_type)
@@ -73,9 +85,23 @@ public class AddTaskActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
-
         FinalActivity.initInjectedView(this);
-
+        mRadioGroup= (RadioGroup) findViewById(R.id.radiogroup);
+        mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.radio_distribute_bill:
+                        mLinearLayoutDisBill.setVisibility(View.VISIBLE);
+                        break;
+                    case R.id.radio_rob_bill:
+                        mLinearLayoutDisBill.setVisibility(View.GONE);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("新增任务");
         setSupportActionBar(toolbar);
@@ -164,14 +190,14 @@ public class AddTaskActivity extends AppCompatActivity {
      */
     public void onSubmit(View view){
         //校验
-        if(!isSelectAccepter){
-            dialogUtil.showCommitDialog("", "请选择受理人");
-            return;
-        }
-        if(!isSelectFollow){
-            dialogUtil.showCommitDialog("", "请选择后续受理人");
-            return;
-        }
+//        if(!isSelectAccepter){
+//            dialogUtil.showCommitDialog("", "请选择受理人");
+//            return;
+//        }
+//        if(!isSelectFollow){
+//            dialogUtil.showCommitDialog("", "请选择后续受理人");
+//            return;
+//        }
         if(etContent.getText().toString().equals("")){
             dialogUtil.showCommitDialog("", "请填写任务描述");
             return;
@@ -194,47 +220,12 @@ public class AddTaskActivity extends AppCompatActivity {
         addTaskHPI.setHandleTime(dtpHandleTime.getDateText("yyyy-MM-dd HH:mm:ss"));
         addTaskHPI.setTaskTime(dtpTaskTime.getDateText("yyyy-MM-dd HH:mm:ss"));
         addTaskHPI.setReceiveId(receiveId);
+
         addTaskHPI.setCreateName(ShareUtil.getInstance(this).getLoginInfo().getUserName());
         addTaskHPI.setListener(new WebAPIListener() {
             @Override
             public void onLoadSuccess(int successNum) {
-//                mUmengPushHPI.setmReceiver(tvAccepter.getText().toString());
-//                Log.d("受理人", tvAccepter.getText().toString());
-//                mUmengPushHPI.setListener(new WebAPIListener() {
-//                    @Override
-//                    public void onLoadSuccess(int successNum) {
-//                        Log.d("成功",""+successNum);
-//                    }
-//
-//                    @Override
-//                    public void onLoadFail(int errNum, String errMessage) {
-//                     Log.d("失败",""+errNum+errMessage);
-//                    }
-//                });
-//                mUmengPushHPI.doConnectInBackground();
-//                StringRequest request = new StringRequest(Request.Method.POST, "https://msg.umeng.com/api/send?sign=mysign", new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//
-//                        Log.d("网络链接", response);
-//
-//                    }
-//                }, new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                         Log.d("网络链接",""+error);
-//                    }
-//                }) {
-//                    @Override
-//                    protected Map<String, String> getParams() throws AuthFailureError {
-//                        HashMap<String, String > map = new HashMap<>();
-//                        return map;
-//                    }
-//                };
-//                request.setRetryPolicy(new DefaultRetryPolicy( 2000,
-//                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-//                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-//                VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(request);
+
                 dialogUtil.dismissProgressDialog();
                 dialogUtil.showShortToast("提交成功");
                 finish();

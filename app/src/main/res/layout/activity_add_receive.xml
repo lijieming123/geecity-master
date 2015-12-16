@@ -192,24 +192,7 @@
                 android:layout_height="104dp"
                 android:id="@+id/aar_rv_photo"
                 android:layout_marginTop="4dp" />
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:checkedButton="@+id/distribute_bill">
-                <RadioButton
-                    android:layout_weight="1"
-                    android:id="@+id/distribute_bill"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="派单"/>
-                <RadioButton
-                    android:layout_weight="1"
-                    android:id="@+id/rob_bill"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="抢单"/>
-            </RadioGroup>
+
 
             <Button
                 android:layout_width="200dp"

@@ -32,4 +32,5 @@
     <string name="title_activity_task_list">TaskListActivity</string>
     <string name="title_activity_add_task">AddTaskActivity</string>
     <string name="title_activity_rob_bill">RobBillActivity</string>
+    <string name="title_activity_robbill_list">RobbillListActivity</string>
 </resources>

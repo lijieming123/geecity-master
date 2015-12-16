@@ -1,14 +1,21 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias '签名'
+            keyPassword '123456'
+            storeFile file('D:/android相关/geecity.jks')
+            storePassword '123456'
+        }
+    }
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
-
     defaultConfig {
         applicationId "net.bluemap.geecitypoperty"
         minSdkVersion 11
         targetSdkVersion 22
-        versionCode 14
+        versionCode 19
         versionName "0.9.1"
     }
     buildTypes {
