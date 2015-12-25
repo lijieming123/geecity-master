@@ -5,6 +5,16 @@ package net.bluemap.geecitypoperty.task.model;
  * Created by LiuPeng on 15/10/27.
  */
 public class TaskBean {
+//任务类型
+    private String jdlx;
+
+    public String getJdlx() {
+        return jdlx;
+    }
+
+    public void setJdlx(String jdlx) {
+        this.jdlx = jdlx;
+    }
 
     //所在接待的id
     private String receiveId = "";
@@ -44,6 +54,7 @@ public class TaskBean {
 
     //详情字段
     //所在接待的描述
+
     private String rContent = "";
     //电话
     private String tel = "";

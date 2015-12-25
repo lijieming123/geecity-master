@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="net.bluemap.geecitypoperty.receive.AddReceiveActivity">
-
-
     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,22 +22,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="8dp">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_addnewreceive">
             <LinearLayout
+
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/aar_ll_room"
                 android:onClick="selectRoom">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="请选择房间"
+                    android:text=" 请选择房间"
                     android:id="@+id/aar_tv_room"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:textSize="16dp" />
+                     />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -48,14 +51,20 @@
                     android:layout_gravity="center_vertical"
                     android:src="@mipmap/common_ic_arrow_right" />
             </LinearLayout>
-
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:background="#333333"></View>
             <LinearLayout
+                android:padding="7dp"
+
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp">
 
                 <EditText
+                    android:background="@null"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/aar_et_contact"
@@ -63,6 +72,7 @@
                     android:hint="联系人" />
 
                 <EditText
+                    android:background="@null"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/aar_et_tel"
@@ -72,16 +82,25 @@
                     android:phoneNumber="true" />
 
             </LinearLayout>
-
+</LinearLayout>
+<LinearLayout
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_addnewreceive"
+    android:padding="3dp">
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+
                 android:id="@+id/aar_ll_complaint"
-                android:onClick="selectRoom">
+                android:onClick="selectRoom"
+            >
 
                 <TextView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="请选择投诉对象或直接填写"
@@ -97,18 +116,24 @@
                     android:layout_gravity="center_vertical"
                     android:src="@mipmap/common_ic_arrow_right" />
             </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#333333"></View>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/aar_et_complaint"
                 android:layout_weight="1"
+                android:background="@null"
                 android:hint="请填写投诉对象（必填）" />
-
+</LinearLayout>
             <LinearLayout
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -151,14 +176,25 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/aar_dtp_time" />
             </LinearLayout>
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_addnewreceive">
             <EditText
+
+                android:background="@null"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/aar_et_content"
-                android:hint="请填写接待描述" />
-
+                android:hint="请填写接待描述"
+                android:padding="8dp"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+   android:background="@color/black" ></View>
             <LinearLayout
+
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
@@ -166,7 +202,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="接待类型："
+                    android:text="  接待类型："
                     android:id="@+id/textView42"
                     android:layout_gravity="center_vertical" />
 
@@ -177,8 +213,9 @@
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1" />
             </LinearLayout>
-
+</LinearLayout>
             <ImageView
+                android:layout_marginTop="5dp"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:id="@+id/aar_iv_photo"

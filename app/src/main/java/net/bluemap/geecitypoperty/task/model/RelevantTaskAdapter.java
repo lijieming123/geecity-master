@@ -37,9 +37,9 @@ public class RelevantTaskAdapter extends RecyclerView.Adapter<RelevantTaskAdapte
         final TaskBean item = list.get(position);
         holder.title.setText("["+(position + 1)+"]["+ item.getState()+"]["+item.getType()+"]["+item.getLevel()+"]");
         if(item.getReceiver().equals("无")){
-            holder.receiver.setText("可抢");
+            holder.receiver.setText(item.getJdlx());
         }else {
-            holder.receiver.setText("受理人：" + item.getReceiver() + "\u3000后续受理人：" + item.getFollowReceiver());
+            holder.receiver.setText("派单："+"受理人：" + item.getReceiver() + "\u3000后续受理人：" + item.getFollowReceiver());
         }
         holder.content.setText(item.getContent());
         holder.handleTime.setText(item.getHandleTime());

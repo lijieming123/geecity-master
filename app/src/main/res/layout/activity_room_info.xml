@@ -19,9 +19,11 @@
         android:visibility="gone" />
 
     <LinearLayout
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_taskdetails"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:padding="8dp">
 
@@ -49,7 +51,10 @@
                 android:layout_weight="1" />
 
         </LinearLayout>
-
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:background="@color/ASBESTOS"></View>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -72,7 +77,10 @@
                 android:layout_gravity="center_vertical"
                 android:textSize="@dimen/item_large" />
         </LinearLayout>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/ASBESTOS"></View>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -99,6 +107,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/view"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
                 android:background="@drawable/btn_blue_selector"
                 android:layout_marginLeft="32dp"
                 android:src="@mipmap/common_btn_phone"

@@ -29,6 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/aat_et_title"
+                android:padding="3dp"
                 android:hint="请填写任务主题" />
 
             <LinearLayout
@@ -89,6 +90,22 @@
                     android:layout_height="wrap_content"
                     android:text="抢单"/>
             </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="任务类型："
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/tv_bill_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="派单"/>
+            </LinearLayout>
+
             <!--派单、抢单-->
             <LinearLayout
                 android:id="@+id/linear_arrange_bill"

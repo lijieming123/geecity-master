@@ -36,7 +36,8 @@ public class AddTaskActivity extends AppCompatActivity {
     //UIs
     @ViewInject(id= R.id.linear_arrange_bill)
     LinearLayout mLinearLayoutDisBill;
-
+    @ViewInject(id= R.id.tv_bill_type)
+    TextView mTvBillType;
     RadioGroup mRadioGroup;
     @ViewInject(id= R.id.radio_distribute_bill)
     RadioButton mRadioBtnDistribute;
@@ -93,9 +94,11 @@ public class AddTaskActivity extends AppCompatActivity {
                 switch (checkedId) {
                     case R.id.radio_distribute_bill:
                         mLinearLayoutDisBill.setVisibility(View.VISIBLE);
+                        mTvBillType.setText("派单");
                         break;
                     case R.id.radio_rob_bill:
                         mLinearLayoutDisBill.setVisibility(View.GONE);
+                        mTvBillType.setText("抢单");
                         break;
                     default:
                         break;
@@ -198,6 +201,10 @@ public class AddTaskActivity extends AppCompatActivity {
 //            dialogUtil.showCommitDialog("", "请选择后续受理人");
 //            return;
 //        }
+        if(etTitle.getText().toString().equals("")){
+            dialogUtil.showCommitDialog("", "请填写任务标题");
+            return;
+        }
         if(etContent.getText().toString().equals("")){
             dialogUtil.showCommitDialog("", "请填写任务描述");
             return;
@@ -205,7 +212,7 @@ public class AddTaskActivity extends AppCompatActivity {
         dialogUtil.showProgressDialog("","正在新增任务",false);
         AddTaskHPI addTaskHPI = new AddTaskHPI(this);
         addTaskHPI.setTitle(etTitle.getText().toString());
-        KeyValueBean level = (KeyValueBean)spnLevel.getSelectedItem();
+        KeyValueBean level = (KeyValueBean) spnLevel.getSelectedItem();
         KeyValueBean type = (KeyValueBean) spnType.getSelectedItem();
         addTaskHPI.setLevel(level.getKey());
         addTaskHPI.setType(type.getKey());
@@ -220,7 +227,7 @@ public class AddTaskActivity extends AppCompatActivity {
         addTaskHPI.setHandleTime(dtpHandleTime.getDateText("yyyy-MM-dd HH:mm:ss"));
         addTaskHPI.setTaskTime(dtpTaskTime.getDateText("yyyy-MM-dd HH:mm:ss"));
         addTaskHPI.setReceiveId(receiveId);
-
+        addTaskHPI.setJdlx(mTvBillType.getText().toString());
         addTaskHPI.setCreateName(ShareUtil.getInstance(this).getLoginInfo().getUserName());
         addTaskHPI.setListener(new WebAPIListener() {
             @Override

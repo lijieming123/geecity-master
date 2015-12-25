@@ -19,18 +19,26 @@
         android:id="@+id/scrollView6" >
 
         <LinearLayout
+
+
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:padding="8dp">
-
+<LinearLayout
+    android:padding="3dp"
+    android:background="@drawable/bg_taskdetails"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="任务完成时间："
@@ -51,6 +59,7 @@
                 android:layout_marginTop="8dp">
 
                 <TextView
+                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="任务关闭时间："
@@ -70,6 +79,7 @@
                 android:layout_marginTop="8dp">
 
                 <TextView
+                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="任务最终级别："
@@ -90,6 +100,7 @@
                 android:layout_marginTop="8dp">
 
                 <TextView
+                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="任务处理方式："
@@ -123,12 +134,14 @@
                     android:hint="返修次数"
                     android:visibility="gone" />
             </LinearLayout>
-
+</LinearLayout>
             <LinearLayout
+                android:padding="3dp"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_taskdetails">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -147,9 +160,10 @@
                     android:layout_marginTop="8dp">
 
                     <TextView
+                        android:textColor="@color/black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="质量："
+                        android:text="质    量："
                         android:id="@+id/textView63"
                         android:textSize="18dp"
                         android:layout_gravity="center_vertical" />
@@ -174,6 +188,7 @@
                 </RadioGroup>
 
                 <RadioGroup
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -184,8 +199,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="态度："
+                        android:text="态    度："
                         android:id="@+id/textView64"
+                        android:textColor="@color/black"
                         android:textSize="18dp"
                         android:layout_gravity="center_vertical" />
 
@@ -219,6 +235,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="及时性："
+                        android:textColor="@color/black"
                         android:id="@+id/textView65"
                         android:textSize="18dp"
                         android:layout_gravity="center_vertical" />
@@ -244,6 +261,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:padding="3dp"
+                android:background="@drawable/bg_taskdetails"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -268,6 +287,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="关闭类型："
+                        android:textColor="@color/black"
                         android:id="@+id/textView57"
                         android:layout_gravity="center_vertical" />
 
@@ -308,6 +328,7 @@
             </LinearLayout>
 
             <Button
+                android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="关闭"

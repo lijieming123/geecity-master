@@ -12,7 +12,6 @@ import net.bluemap.geecitypoperty.common.model.LoginInfo;
  * Created by Liu Peng on 2015/7/24.
  */
 public class ShareUtil {
-
     private static ShareUtil shareUtil;
     private Context mContext;
 
@@ -66,7 +65,7 @@ public class ShareUtil {
      */
     public String getHostUrl(){
         SharedPreferences shared = mContext.getSharedPreferences("setting", Activity.MODE_PRIVATE);
-        return shared.getString("hostUrl","http://4.89892528.cn:8002/");
+        return shared.getString("hostUrl","http://4.89892528.cn:8004/");
     }
 
     /**

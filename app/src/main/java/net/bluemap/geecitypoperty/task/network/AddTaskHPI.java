@@ -30,9 +30,11 @@ public class AddTaskHPI extends HttpPostAPI {
     private String createName;
     //派工时间
     private String taskTime;
+private  String jdlx;
 
-
-
+    public void setJdlx(String jdlx) {
+        this.jdlx = jdlx;
+    }
 
     public AddTaskHPI(Context context) {
         super(context);
@@ -55,7 +57,7 @@ public class AddTaskHPI extends HttpPostAPI {
         params.put("content", content);
         params.put("createName", createName);
         params.put("taskTime", taskTime);
-
+        params.put("jdlx",jdlx);
     }
 
     @Override
